@@ -13,9 +13,10 @@ def get_dict(file_name):
         data = json.load(file)
     return data
 
+
 def file_navigation(data: dict) -> str:
     """
-
+    Function that navigates through json file.
     """
     dict_keys = data.keys()
     print("Here you can see some options: " + ", ".join(dict_keys) +
@@ -49,6 +50,10 @@ def file_navigation(data: dict) -> str:
 
 
 def list_case(data, user_input, second_user_input, length):
+    """
+    Function that helps navigating through json file and is used 
+    in case when user's choice is a list.
+    """
     num = int(second_user_input) - 1
     if num < 0 or num > length:
         print("Invalid input. Please try again.")
@@ -77,4 +82,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# print(get_dict().keys())
